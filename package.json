@@ -1,0 +1,31 @@
+{
+  "name": "oh-my-zsh-theme-finder",
+  "version": "1.0.0",
+  "description": "Oh my zsh theme finder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migueGodoy/oh-my-zsh-theme-finder.git"
+  },
+  "keywords": [
+    "oh-my-zsh"
+  ],
+  "author": "Migue Godoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migueGodoy/oh-my-zsh-theme-finder/issues"
+  },
+  "homepage": "https://github.com/migueGodoy/oh-my-zsh-theme-finder#readme",
+  "devDependencies": {
+    "prettier": "2.8.4",
+    "standard": "17.0.0",
+    "vitest": "0.28.5",
+    "wrangler": "2.10.0"
+  },
+  "dependencies": {
+    "hono": "2.7.8"
+  }
+}
