@@ -1,6 +1,6 @@
-import { ExecutionContext } from "hono/dist/types/types"
-import { Hono } from "hono"
-import themes from "../db/themes.json"
+import { ExecutionContext } from 'hono/dist/types/types'
+import { Hono } from 'hono'
+import themes from '../db/themes.json'
 
 export interface Env {
   // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
@@ -18,18 +18,18 @@ export interface Env {
 
 const app = new Hono()
 
-app.get("/", (ctx) => {
+app.get('/', (ctx) => {
   return ctx.json({
     endpoints: [
       {
-        url: "/themes",
-        description: "Get al oh-my-zsh themes",
-      },
-    ],
+        url: '/themes',
+        description: 'Get al oh-my-zsh themes'
+      }
+    ]
   })
 })
 
-app.get("/themes", (ctx) => {
+app.get('/themes', (ctx) => {
   return ctx.json(themes)
 })
 
