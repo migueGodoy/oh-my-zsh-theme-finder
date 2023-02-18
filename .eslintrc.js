@@ -1,19 +1,13 @@
 module.exports = {
-  extends: ['standard', 'plugin:astro/recommended'],
+  extends: ['standard', 'eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  root: true,
   rules: {
     'no-tabs': 'off',
     indent: 'off',
-    'space-before-function-paren': 'off'
-  },
-  overrides: [
-    {
-      files: ['*.astro'],
-      parser: 'astro-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro']
-      },
-      rules: {}
-    }
-  ]
+    'space-before-function-paren': 'off',
+    'comma-dangle': 'error',
+    'eol-last': 'error'
+  }
 }

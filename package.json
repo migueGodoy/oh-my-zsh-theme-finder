@@ -23,6 +23,9 @@
   "homepage": "https://github.com/migueGodoy/oh-my-zsh-theme-finder#readme",
   "devDependencies": {
     "@cloudflare/workers-types": "4.20230214.0",
+    "@typescript-eslint/eslint-plugin": "5.52.0",
+    "@typescript-eslint/parser": "5.52.0",
+    "eslint": "8.34.0",
     "prettier": "2.8.4",
     "standard": "17.0.0",
     "typescript": "4.9.5",
