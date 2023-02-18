@@ -31,5 +31,28 @@
   },
   "dependencies": {
     "hono": "2.7.8"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "plugin:astro/recommended"
+    ],
+    "rules": {
+      "no-tabs": "off",
+      "indent": "off",
+      "no-unused-vars": "off",
+      "space-before-function-paren": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.astro"
+        ],
+        "parser": "astro-eslint-parser",
+        "rules": {
+          "astro/no-set-html-directive": "error"
+        }
+      }
+    ]
   }
 }
