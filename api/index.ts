@@ -34,7 +34,10 @@ app.get('/', (ctx) => {
 app.get('/themes', (c) => {
   const { search } = c.req.query()
   if (!search) return c.json(themes)
-  return c.json(fuse.search(search))
+
+  const filteredThemes = fuse.search(search)
+  const mappedFilteredThemes = filteredThemes.map((theme) => theme.item)
+  return c.json(mappedFilteredThemes)
 })
 
 export default app
