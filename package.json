@@ -4,8 +4,13 @@
   "description": "Oh my zsh theme finder",
   "main": "index.js",
   "scripts": {
+    "astro": "astro",
+    "build": "astro build",
     "dev:api": "wrangler dev api/index.ts",
+    "dev:web": "astro dev",
+    "preview": "astro preview",
     "publish:api": "wrangler publish api/index.ts",
+    "start": "astro dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,14 +31,19 @@
     "@typescript-eslint/eslint-plugin": "5.52.0",
     "@typescript-eslint/parser": "5.52.0",
     "eslint": "8.34.0",
+    "eslint-plugin-astro": "0.23.0",
     "prettier": "2.8.4",
+    "prettier-plugin-astro": "0.8.0",
     "standard": "17.0.0",
     "typescript": "4.9.5",
     "vitest": "0.28.5",
     "wrangler": "2.10.0"
   },
   "dependencies": {
+    "@astrojs/tailwind": "3.0.1",
+    "astro": "^2.0.14",
     "fuse.js": "6.6.2",
-    "hono": "2.7.8"
+    "hono": "2.7.8",
+    "tailwindcss": "3.2.7"
   }
 }
