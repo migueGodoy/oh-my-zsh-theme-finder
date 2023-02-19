@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import themes from '../db/themes.json'
+import Fuse from 'fuse.js'
 
 // export interface Env {
 // Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
@@ -17,6 +18,8 @@ import themes from '../db/themes.json'
 
 const app = new Hono()
 
+const fuse = new Fuse(themes, { keys: ['name'] })
+
 app.get('/', (ctx) => {
   return ctx.json({
     endpoints: [
@@ -28,8 +31,10 @@ app.get('/', (ctx) => {
   })
 })
 
-app.get('/themes', (ctx) => {
-  return ctx.json(themes)
+app.get('/themes', (c) => {
+  const { search } = c.req.query()
+  if (!search) return c.json(themes)
+  return c.json(fuse.search(search))
 })
 
 export default app
